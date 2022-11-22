@@ -1,0 +1,196 @@
+<!Doctype html>
+<html>
+<head>
+<h1 style="text-align: center;"><strong>The Software Design Specification</strong></h1>
+</head>
+<body>
+<p><strong>&nbsp;</strong><strong><u>1</u></strong><strong><u>. Introduction</u></strong></p>
+<p><strong>1.1 Purpose</strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This software Design provides the design details of Tufi Tutor Management System. The expected audience is the people who are willingly wish to use this application such as: the student and the teacher. It will also serve a suggestion list of students for the tutors.</p>
+<p>&nbsp;</p>
+<p><strong>1.2</strong><strong> Scope of the development project</strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The document contains a complete description of the design of Tufi Tutor Management System.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The basic pages will be in Html and CSS.</p>
+<p>This application helps both students and tutors to find their desired intentions</p>
+<p>&nbsp;</p>
+<p><strong>1.3</strong><strong> Definitions, acronyms, and abbreviations</strong></p>
+<ul>
+<li>GUI - Graphical User Interface</li>
+<li>PC - Personal Computer (desktop or laptop)</li>
+<li>PocketPC - A Windows-based operating system</li>
+<li>Project Server - The computer which contains the central project database, and which serves project data to various clients.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>1.4</strong><strong> References</strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N/A</p>
+<p>&nbsp;</p>
+<p><strong>1.5</strong><strong> Overview of document</strong></p>
+<p>The Detailed description of components section will be the main focus of this document.&nbsp; It will describe lower-level classes, components, and functions, as well as the interaction between these internal components. It will also provide the appropriate diagrams to clearly demonstrate the design of each component.</p>
+
+<p>We enlist the major decisions we had to make when designing our system, and why we made the choices we did like runtime environment, processes, and development view.</p>
+
+<br/>
+<br/>
+
+    
+    <h2>Component design specification</h2>
+    <blockquote>
+    <h3><b>1 Component Overview</b></h3>
+    </blockquote>
+    <blockquote>
+    <p>
+        The following outline will provide the purpose and architecture of our system's major components. 
+        </p>
+    </blockquote>
+    <blockquote>
+    <h3>2 Database</h3></blockquote>
+    <blockquote>
+        <table cellSpacing="2" cellPadding="2" border="1">
+        <tr>
+			<td width="20%"><b>Identification</b></td>
+			<td width="80%">Database Software</td>
+            </tr>
+		<tr>
+			<td><b>Type</b></td>
+			<td>Module</td>
+            </tr>
+		<tr>
+			<td><b>Purpose</b></td>
+			<td>Provides data management and storage of informations in a server.</td>
+            </tr>
+        <tr>
+			<td><b>Function</b></td>
+			<td>Takes SQL QUERY and UPDATE commands from the server software, 
+			and stores the data according to those commands.</td>
+		    </tr>
+        
+            
+        
+        </table>
+        </blockquote>
+    <blockquote>
+    <h3>3 Log-in Screen</h3></blockquote>
+    <blockquote>
+        <table cellSpacing="2" cellPadding="2" border="1">
+        <tr>
+			<td width="20%"><b>Identification</b></td>
+			<td width="80%">Login Screen</td>
+            </tr>
+        <tr><td><b>Type</b></td>
+            <td>Class/Form</td>
+            </tr>
+            <tr>
+            <td><b>Purpose</b></td>
+            <td>This will allow access to those who are the authorized user(Tutor/Student) of our Tufi Tutor Management System. </td></tr>
+            <tr>
+            <td><b>Subordinates</b></td>
+                <td>This screen contains<br><ul><li>Main Menu Screen</li><li>New User Account Screen</li></ul></td>
+            
+            </tr>
+            <tr><td><b>Data</b></td>
+                <td>User name and password entered by the user which is validated with a query against the database.</td>
+            
+            
+            </tr>
+        </table></blockquote>
+    <blockquote>
+    <h3>4 New User Account Screen</h3></blockquote>
+    <blockquote>
+        <table cellSpacing="2" cellPadding="2" border="1">
+        <tr>
+			<td width="20%"><b>Identification</b></td>
+			<td width="80%">New User Account Screen</td>
+            </tr>
+        <tr><td><b>Type</b></td>
+            <td>Class/Form</td>
+            </tr>
+            <tr>
+            <td><b>Purpose</b></td>
+            <td>This will allow access to the people who don't have any account associated with this website. </td></tr>
+            <tr>
+            <td><b>Subordinates</b></td>
+                <td>This screen contains<br><ul><li>Main Menu Screen</li></ul></td>
+            
+            </tr>
+            <tr><td><b>Data</b></td>
+                <td>New user has to give their detailed information to create an account. Which includes <br><ul>
+                    <li>E-mail Id</li>
+                   
+                    <li>Password</li>
+                    <li>Confirm Password</li>
+                    </ul></td>
+            
+            
+            </tr>
+        </table></blockquote>
+    <blockquote>
+    
+    <h3>5 Tutor's Profile Screen</h3></blockquote>
+    <blockquote>
+        <table cellSpacing="2" cellPadding="2" border="1">
+        <tr>
+			<td width="20%"><b>Identification</b></td>
+			<td width="80%">Tutor's Profile Screen</td>
+            </tr>
+        <tr><td><b>Type</b></td>
+            <td>Class/Form</td>
+            </tr>
+            <tr>
+            <td><b>Purpose</b></td>
+            <td>Here an user can see the profile of a student.  </td></tr>
+            <tr>
+            <td><b>Subordinates</b></td>
+                <td>This screen contains<br><ul><li>Confirmation Screen</li>
+            </tr>
+            
+        </table></blockquote>
+        <blockquote>
+        <h3>6 Student's Profile Screen</h3></blockquote>
+    <blockquote>
+        <table cellSpacing="2" cellPadding="2" border="1">
+        <tr>
+            <td width="20%"><b>Identification</b></td>
+            <td width="80%">Student's Profile Screen</td>
+            </tr>
+        <tr><td><b>Type</b></td>
+            <td>Class/Form</td>
+            </tr>
+            <tr>
+            <td><b>Purpose</b></td>
+            <td>Here an user can see the profile of a tutor.  </td></tr>
+            <tr>
+            <td><b>Subordinates</b></td>
+                <td>This screen contains<br><ul><li>Contact</li>
+            </tr>
+            
+        </table></blockquote>
+
+    <br/>
+    <br/>
+
+
+	<b><h2> Design decisions and tradeoffs</h2></b>
+	<h3><b> Java/PHP debate</b></h3>
+      <p>The first issue we dealt with as a group was whether to develop in Java or PHP. Two of our
+         members wanted to develop in PHP because they are familiar with it and enjoy working with it
+         more. However, while some members of the group do not have PHP experience, all have some
+         html/css coding experience. Another important issue we considered in selecting a code was the
+         fact that we have to design our system for operating environment. We have to design our system
+         in such a way that it can be supported by most of operating systems
+         such as windows, linux, mac os x, android.</p>
+      <h3><b> Schedule</b></h3>
+      <p>As a team we also chose not to include a scheduling feature in our software. There are several
+         existing software products that help you plan for the future but few that let you track things
+         done in the past. We also recognized that we would not have enough time to properly implement a
+         scheduling feature and decided to exclude it from our plan.</p>
+      <h3><b> Projects/ProjectItems</b></h3>
+      <p>We also considered using one class for both projects and sub-tasks. This would allow the user
+         to easily upgrade a sub-task to project status, or to assign the sub-task to another user. The only difference
+         between the two would be the amount of information that the user provided. However,
+         after examining the options, we decided that it will be easier to create two different tasks
+         and provide a means by which the user can "upgrade" a sub-task to project status, at which point they
+         can reassign it if they so desire.</p>
+
+     </body>
+
+</html>
